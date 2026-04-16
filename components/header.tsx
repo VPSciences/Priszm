@@ -22,7 +22,7 @@ export function Header() {
         <div className="flex lg:flex-1">
           <Link href="/" className="flex items-center gap-2 -m-1.5 p-1.5">
             <Image
-              src="/priszm-logo.jpg"
+              src="/priszm-logo.png"
               alt="Priszm"
               width={32}
               height={32}
