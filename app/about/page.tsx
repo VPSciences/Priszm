@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Sparkles, ArrowLeft, Target, Zap, Users, Heart } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Footer } from '@/components/footer'
 
 export const metadata = {
   title: 'About - Priszm',
@@ -119,6 +120,8 @@ export default function AboutPage() {
           </Button>
         </div>
       </section>
+
+      <Footer />
     </div>
   )
 }

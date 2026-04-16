@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Sparkles, ArrowLeft, Shield, Lock, Server, Eye, CheckCircle2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Footer } from '@/components/footer'
 
 export const metadata = {
   title: 'Security - Priszm',
@@ -134,6 +135,8 @@ export default function SecurityPage() {
           </Button>
         </div>
       </section>
+
+      <Footer />
     </div>
   )
 }

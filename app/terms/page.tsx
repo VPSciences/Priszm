@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Sparkles, ArrowLeft } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Footer } from '@/components/footer'
 
 export const metadata = {
   title: 'Terms of Service - Priszm',
@@ -104,6 +105,8 @@ export default function TermsPage() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   )
 }

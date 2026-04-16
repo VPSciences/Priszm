@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Sparkles, ArrowLeft, Mail, MessageSquare, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
+import { Footer } from '@/components/footer'
 
 export const metadata = {
   title: 'Contact - Priszm',
@@ -128,6 +129,8 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   )
 }

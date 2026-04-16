@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Sparkles, ArrowLeft, MapPin, Clock, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Footer } from '@/components/footer'
 
 export const metadata = {
   title: 'Careers - Priszm',
@@ -137,6 +138,8 @@ export default function CareersPage() {
           </Button>
         </div>
       </section>
+
+      <Footer />
     </div>
   )
 }

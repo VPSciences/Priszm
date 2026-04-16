@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Sparkles, ArrowLeft } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Footer } from '@/components/footer'
 
 export const metadata = {
   title: 'Privacy Policy - Priszm',
@@ -93,6 +94,8 @@ export default function PrivacyPage() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   )
 }
