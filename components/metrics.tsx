@@ -1,17 +1,17 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { Activity, Clock, Percent, Users } from 'lucide-react'
+import { Activity, Clock, Percent, Globe } from 'lucide-react'
 
 export function Metrics() {
   const [time, setTime] = useState(new Date())
-  const [leadsToday, setLeadsToday] = useState(0)
+  const [requests, setRequests] = useState(0)
 
   useEffect(() => {
     const timer = setInterval(() => {
       setTime(new Date())
-      // Simulate increasing leads
-      setLeadsToday(prev => prev + Math.floor(Math.random() * 3))
+      // Simulate increasing requests
+      setRequests(prev => prev + Math.floor(Math.random() * 50))
     }, 1000)
 
     return () => clearInterval(timer)
@@ -20,34 +20,33 @@ export function Metrics() {
   const metrics = [
     {
       icon: Activity,
-      label: 'Leads generated today',
-      value: (2847 + leadsToday).toLocaleString(),
+      label: 'API requests today',
+      value: (847293 + requests).toLocaleString(),
       status: 'live',
     },
     {
       icon: Percent,
-      label: 'Conversion rate',
-      value: '34.7%',
-      change: '+2.3%',
+      label: 'Uptime this quarter',
+      value: '99.99%',
     },
     {
       icon: Clock,
-      label: 'Avg. response time',
-      value: '< 2 min',
+      label: 'Average response time',
+      value: '23ms',
     },
     {
-      icon: Users,
-      label: 'Clients served',
-      value: '500+',
+      icon: Globe,
+      label: 'Countries served',
+      value: '142',
     },
   ]
 
   return (
-    <section className="py-24 sm:py-32 bg-card/30">
+    <section className="py-24 sm:py-32 section-muted">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section header */}
         <div className="max-w-2xl mb-16">
-          <p className="text-sm font-medium text-primary tracking-wider uppercase mb-3">Live Metrics</p>
+          <p className="text-sm font-medium text-muted-foreground tracking-wider uppercase mb-3">Live metrics</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
             Performance you
             <br />
@@ -76,11 +75,11 @@ export function Metrics() {
               className="p-6 rounded-2xl bg-card border border-border"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 rounded-lg bg-primary/10">
-                  <metric.icon className="w-4 h-4 text-primary" />
+                <div className="p-2 rounded-lg bg-secondary">
+                  <metric.icon className="w-4 h-4 text-foreground" />
                 </div>
                 {metric.status === 'live' && (
-                  <span className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-500/10 text-green-500 text-xs">
+                  <span className="flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-500/10 text-green-600 text-xs">
                     <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
                     Live
                   </span>
@@ -89,12 +88,7 @@ export function Metrics() {
               <div className="text-3xl font-bold text-foreground mb-1">
                 {metric.value}
               </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-muted-foreground">{metric.label}</span>
-                {metric.change && (
-                  <span className="text-sm text-green-500 font-medium">{metric.change}</span>
-                )}
-              </div>
+              <span className="text-sm text-muted-foreground">{metric.label}</span>
             </div>
           ))}
         </div>

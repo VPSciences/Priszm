@@ -36,14 +36,14 @@ const testimonials = [
 ]
 
 const companies = [
-  'TechScale',
-  'GrowthLab',
-  'Nexus',
-  'CloudFirst',
-  'Vertex AI',
+  'Meridian Labs',
+  'Flux Systems',
+  'Beacon AI',
+  'Prism Analytics',
+  'Nova Tech',
   'Quantum Corp',
   'Atlas Digital',
-  'Meridian Labs',
+  'Vertex Labs',
 ]
 
 export function Testimonials() {
@@ -60,12 +60,12 @@ export function Testimonials() {
   const current = testimonials[currentIndex]
 
   return (
-    <section className="py-24 sm:py-32">
+    <section className="py-24 sm:py-32 bg-background">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section header */}
         <div className="flex items-center justify-between mb-12">
           <div>
-            <p className="text-sm font-medium text-primary tracking-wider uppercase mb-3">Testimonials</p>
+            <p className="text-sm font-medium text-muted-foreground tracking-wider uppercase mb-3">What people say</p>
             <div className="text-sm text-muted-foreground">
               {String(currentIndex + 1).padStart(2, '0')} / {String(testimonials.length).padStart(2, '0')}
             </div>
@@ -92,7 +92,7 @@ export function Testimonials() {
 
         {/* Testimonial card */}
         <div className="relative p-8 md:p-12 rounded-2xl bg-card border border-border">
-          <Quote className="absolute top-8 right-8 w-12 h-12 text-primary/10" />
+          <Quote className="absolute top-8 right-8 w-12 h-12 text-muted-foreground/10" />
           
           <blockquote className="text-2xl md:text-3xl font-medium text-foreground leading-relaxed max-w-3xl">
             &ldquo;{current.quote}&rdquo;
@@ -100,7 +100,7 @@ export function Testimonials() {
 
           <div className="mt-8 flex items-center justify-between flex-wrap gap-6">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold">
+              <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-foreground font-semibold">
                 {current.avatar}
               </div>
               <div>
@@ -109,8 +109,8 @@ export function Testimonials() {
               </div>
             </div>
             
-            <div className="px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-              <span className="text-sm font-medium text-primary">Key Result: {current.result}</span>
+            <div className="px-4 py-2 rounded-full bg-secondary border border-border">
+              <span className="text-sm font-medium text-foreground">Key Result: {current.result}</span>
             </div>
           </div>
         </div>
@@ -126,7 +126,7 @@ export function Testimonials() {
               {[...companies, ...companies].map((company, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 mx-8 text-xl font-semibold text-muted-foreground/50"
+                  className="flex-shrink-0 mx-8 text-xl font-semibold text-muted-foreground/40"
                 >
                   {company}
                 </div>

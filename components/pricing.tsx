@@ -9,31 +9,31 @@ const plans = [
   {
     name: 'Starter',
     number: '01',
-    description: 'For teams just getting started with AI lead generation',
+    description: 'For individuals and small projects',
     price: { monthly: 0, annual: 0 },
     features: [
-      'Up to 100 leads/month',
-      'Basic AI targeting',
-      'Email integration',
-      'Standard support',
-      'CRM export',
+      'Up to 3 projects',
+      '1GB storage',
+      'Community support',
+      'Basic analytics',
+      'SSL certificates',
     ],
     cta: 'Start free',
     popular: false,
   },
   {
-    name: 'Growth',
+    name: 'Pro',
     number: '02',
-    description: 'For scaling teams that need more power',
-    price: { monthly: 299, annual: 249 },
+    description: 'For growing teams and businesses',
+    price: { monthly: 24, annual: 20 },
     features: [
-      'Up to 2,500 leads/month',
-      'Advanced AI targeting',
-      'Multi-channel outreach',
+      'Unlimited projects',
+      '100GB storage',
       'Priority support',
-      'CRM integrations',
-      'Custom workflows',
-      'Analytics dashboard',
+      'Advanced analytics',
+      'Custom domains',
+      'Team collaboration',
+      'API access',
     ],
     cta: 'Start trial',
     popular: true,
@@ -41,17 +41,17 @@ const plans = [
   {
     name: 'Enterprise',
     number: '03',
-    description: 'For large-scale operations with custom needs',
+    description: 'For large-scale operations',
     price: { monthly: 'Custom', annual: 'Custom' },
     features: [
-      'Unlimited leads',
-      'Custom AI models',
-      'Dedicated account manager',
-      '24/7 premium support',
+      'Everything in Pro',
+      'Unlimited storage',
+      '24/7 dedicated support',
       'Custom integrations',
       'SLA guarantee',
       'On-premise option',
       'Security audit',
+      'Custom contracts',
     ],
     cta: 'Contact sales',
     popular: false,
@@ -62,11 +62,11 @@ export function Pricing() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly')
 
   return (
-    <section id="pricing" className="py-24 sm:py-32 bg-card/30">
+    <section id="pricing" className="py-24 sm:py-32 section-muted">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="text-sm font-medium text-primary tracking-wider uppercase mb-3">Pricing</p>
+          <p className="text-sm font-medium text-muted-foreground tracking-wider uppercase mb-3">Pricing</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
             Simple, transparent
             <br />
@@ -84,7 +84,7 @@ export function Pricing() {
             className={cn(
               'px-4 py-2 rounded-lg text-sm font-medium transition-colors',
               billingCycle === 'monthly'
-                ? 'bg-primary text-primary-foreground'
+                ? 'bg-foreground text-background'
                 : 'text-muted-foreground hover:text-foreground'
             )}
           >
@@ -95,12 +95,12 @@ export function Pricing() {
             className={cn(
               'px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2',
               billingCycle === 'annual'
-                ? 'bg-primary text-primary-foreground'
+                ? 'bg-foreground text-background'
                 : 'text-muted-foreground hover:text-foreground'
             )}
           >
             Annual
-            <span className="px-2 py-0.5 rounded-full bg-green-500/10 text-green-500 text-xs">
+            <span className="px-2 py-0.5 rounded-full bg-green-500/10 text-green-600 text-xs">
               Save 17%
             </span>
           </button>
@@ -114,12 +114,12 @@ export function Pricing() {
               className={cn(
                 'relative p-6 rounded-2xl border transition-all',
                 plan.popular
-                  ? 'bg-card border-primary/50 ring-1 ring-primary/20'
+                  ? 'bg-card border-foreground/20 ring-1 ring-foreground/10'
                   : 'bg-card border-border'
               )}
             >
               {plan.popular && (
-                <div className="absolute -top-3 left-6 px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-medium">
+                <div className="absolute -top-3 left-6 px-3 py-1 rounded-full bg-foreground text-background text-xs font-medium">
                   Most Popular
                 </div>
               )}
@@ -147,7 +147,7 @@ export function Pricing() {
               <ul className="space-y-3 mb-8">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-center gap-3 text-sm text-muted-foreground">
-                    <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                    <Check className="w-4 h-4 text-foreground flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
@@ -157,7 +157,7 @@ export function Pricing() {
                 className={cn(
                   'w-full',
                   plan.popular
-                    ? 'bg-primary text-primary-foreground hover:bg-primary/90'
+                    ? 'bg-foreground text-background hover:bg-foreground/90'
                     : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'
                 )}
               >

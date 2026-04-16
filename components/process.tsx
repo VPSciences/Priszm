@@ -37,11 +37,11 @@ console.log(leads) // 127 leads found`
 
 export function Process() {
   return (
-    <section id="process" className="py-24 sm:py-32 bg-card/30">
+    <section id="process" className="py-24 sm:py-32 section-muted">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section header */}
         <div className="max-w-2xl">
-          <p className="text-sm font-medium text-primary tracking-wider uppercase mb-3">Process</p>
+          <p className="text-sm font-medium text-muted-foreground tracking-wider uppercase mb-3">Process</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
             Three steps.
             <br />
@@ -60,7 +60,7 @@ export function Process() {
                 )}
                 
                 {/* Number circle */}
-                <div className="absolute left-0 top-0 flex items-center justify-center w-6 h-6 rounded-full bg-primary text-primary-foreground text-xs font-bold">
+                <div className="absolute left-0 top-0 flex items-center justify-center w-6 h-6 rounded-full bg-foreground text-background text-xs font-bold">
                   {step.number}
                 </div>
                 
@@ -74,31 +74,28 @@ export function Process() {
 
           {/* Code preview */}
           <div className="relative">
-            <div className="rounded-xl border border-border bg-background overflow-hidden">
+            <div className="rounded-xl border border-border overflow-hidden shadow-sm">
               {/* Window header */}
               <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-card">
                 <div className="flex items-center gap-2">
                   <div className="flex gap-1.5">
-                    <div className="w-3 h-3 rounded-full bg-destructive/60" />
-                    <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
-                    <div className="w-3 h-3 rounded-full bg-green-500/60" />
+                    <div className="w-3 h-3 rounded-full bg-red-400" />
+                    <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                    <div className="w-3 h-3 rounded-full bg-green-400" />
                   </div>
                   <span className="ml-2 text-xs text-muted-foreground font-mono">leads.ts</span>
                 </div>
-                <div className="flex items-center gap-1 text-xs text-green-500">
+                <div className="flex items-center gap-1 text-xs text-green-600">
                   <CheckCircle2 className="w-3 h-3" />
                   <span>Ready</span>
                 </div>
               </div>
               
               {/* Code content */}
-              <pre className="p-4 text-sm font-mono text-muted-foreground overflow-x-auto">
+              <pre className="p-4 text-sm font-mono code-block overflow-x-auto">
                 <code>{codeSnippet}</code>
               </pre>
             </div>
-
-            {/* Decorative glow */}
-            <div className="absolute -inset-4 -z-10 bg-primary/5 rounded-2xl blur-2xl" />
           </div>
         </div>
       </div>

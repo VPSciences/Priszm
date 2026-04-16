@@ -17,15 +17,21 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="/" className="flex items-center gap-2 -m-1.5 p-1.5">
-            <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 border border-primary/20">
-              <Sparkles className="w-4 h-4 text-primary" />
+            <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-foreground">
+              <Sparkles className="w-4 h-4 text-background" />
             </div>
             <span className="text-xl font-bold text-foreground">Priszm</span>
           </Link>
+        </div>
+
+        <div className="hidden lg:flex lg:items-center">
+          <div className="px-4 py-1.5 rounded-full bg-secondary/50 border border-border text-sm text-muted-foreground">
+            The platform for modern teams
+          </div>
         </div>
         
         <div className="flex lg:hidden">
@@ -59,7 +65,7 @@ export function Header() {
           <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
             Log in
           </Button>
-          <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
+          <Button size="sm" className="bg-foreground text-background hover:bg-foreground/90">
             Get Started
           </Button>
         </div>
@@ -67,7 +73,7 @@ export function Header() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden">
+        <div className="lg:hidden bg-background border-b border-border">
           <div className="space-y-1 px-6 pb-6 pt-2">
             {navigation.map((item) => (
               <Link
@@ -83,7 +89,7 @@ export function Header() {
               <Button variant="ghost" className="w-full justify-center">
                 Log in
               </Button>
-              <Button className="w-full justify-center bg-primary text-primary-foreground">
+              <Button className="w-full justify-center bg-foreground text-background">
                 Get Started
               </Button>
             </div>

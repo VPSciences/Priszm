@@ -12,18 +12,12 @@ const stats = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center pt-24 pb-16 overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px] animate-pulse-glow" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-[128px] animate-pulse-glow" style={{ animationDelay: '1s' }} />
-      </div>
-
+    <section className="relative min-h-screen flex flex-col justify-center pt-24 pb-16 overflow-hidden grid-background">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Badge */}
         <div className="flex justify-center mb-8">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border text-sm text-muted-foreground">
-            <Zap className="w-4 h-4 text-primary" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border text-sm text-muted-foreground">
+            <Zap className="w-4 h-4 text-foreground" />
             <span>AI-Powered Lead Generation Platform</span>
           </div>
         </div>
@@ -31,18 +25,17 @@ export function Hero() {
         {/* Main headline */}
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.1]">
-            <span className="block">Generate leads on</span>
-            <span className="block gradient-text">autopilot with AI</span>
+            <span className="block">The platform to</span>
+            <span className="block text-muted-foreground">generate leads</span>
           </h1>
           
           <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Stop wasting time on manual prospecting. Our AI identifies, qualifies, and delivers 
-            high-intent leads directly to your pipeline — 24/7.
+            Your toolkit to stop cold calling and start converting. Securely discover, qualify, and engage leads at scale.
           </p>
 
           {/* CTA buttons */}
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8 text-base">
+            <Button size="lg" className="bg-foreground text-background hover:bg-foreground/90 h-12 px-8 text-base">
               Start free trial
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
@@ -64,7 +57,7 @@ export function Hero() {
               key={index}
               className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border text-sm text-muted-foreground"
             >
-              <feature.icon className="w-4 h-4 text-primary" />
+              <feature.icon className="w-4 h-4 text-foreground" />
               <span>{feature.label}</span>
             </div>
           ))}
@@ -72,7 +65,7 @@ export function Hero() {
       </div>
 
       {/* Stats marquee */}
-      <div className="mt-20 border-y border-border bg-card/30">
+      <div className="mt-20 border-y border-border bg-card">
         <div className="relative overflow-hidden py-6">
           <div className="flex animate-marquee">
             {[...stats, ...stats].map((stat, index) => (
@@ -81,7 +74,7 @@ export function Hero() {
                 className="flex items-center gap-8 px-12 border-r border-border"
               >
                 <div className="text-right">
-                  <div className="text-2xl sm:text-3xl font-bold text-primary">{stat.value}</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-foreground">{stat.value}</div>
                   <div className="text-sm text-muted-foreground">{stat.label}</div>
                 </div>
                 <div className="text-xs font-medium text-muted-foreground/60 tracking-wider">

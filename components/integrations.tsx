@@ -15,18 +15,18 @@ const integrations = [
 
 export function Integrations() {
   return (
-    <section id="integrations" className="py-24 sm:py-32">
+    <section id="integrations" className="py-24 sm:py-32 bg-background">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-sm font-medium text-primary tracking-wider uppercase mb-3">Integrations</p>
+          <p className="text-sm font-medium text-muted-foreground tracking-wider uppercase mb-3">Integrations</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
             Works with everything
             <br />
             <span className="text-muted-foreground">you already use.</span>
           </h2>
           <p className="mt-4 text-muted-foreground">
-            50+ pre-built integrations. Connect your entire stack in minutes.
+            200+ pre-built integrations. Connect your entire stack in minutes.
           </p>
         </div>
 
@@ -41,7 +41,7 @@ export function Integrations() {
             {[...integrations, ...integrations].map((integration, index) => (
               <div
                 key={`row1-${index}`}
-                className="flex-shrink-0 mx-3 px-6 py-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors"
+                className="flex-shrink-0 mx-3 px-6 py-4 rounded-xl bg-card border border-border hover:border-foreground/20 transition-colors"
               >
                 <div className="text-base font-medium text-foreground">{integration.name}</div>
                 <div className="text-xs text-muted-foreground mt-1">{integration.category}</div>
@@ -54,7 +54,7 @@ export function Integrations() {
             {[...integrations.reverse(), ...integrations].map((integration, index) => (
               <div
                 key={`row2-${index}`}
-                className="flex-shrink-0 mx-3 px-6 py-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors"
+                className="flex-shrink-0 mx-3 px-6 py-4 rounded-xl bg-card border border-border hover:border-foreground/20 transition-colors"
               >
                 <div className="text-base font-medium text-foreground">{integration.name}</div>
                 <div className="text-xs text-muted-foreground mt-1">{integration.category}</div>

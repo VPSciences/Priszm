@@ -30,14 +30,14 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-card/30">
+    <footer className="border-t border-border bg-card">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           {/* Logo and description */}
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2">
-              <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 border border-primary/20">
-                <Sparkles className="w-4 h-4 text-primary" />
+              <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-foreground">
+                <Sparkles className="w-4 h-4 text-background" />
               </div>
               <span className="text-xl font-bold text-foreground">Priszm</span>
             </Link>
