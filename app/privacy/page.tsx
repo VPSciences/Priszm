@@ -2,11 +2,14 @@ import Link from 'next/link'
 import { Sparkles, ArrowLeft } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Footer } from '@/components/footer'
+import { generateMetadata as createMetadata } from '@/lib/seo'
 
-export const metadata = {
-  title: 'Privacy Policy - Priszm',
-  description: 'Priszm privacy policy and data handling practices.',
-}
+export const metadata = createMetadata({
+  title: 'Privacy Policy',
+  description: 'Priszm privacy policy and data handling practices. Learn how we collect, use, and protect your information.',
+  keywords: ['privacy policy', 'data protection', 'GDPR compliance'],
+  noIndex: false,
+})
 
 export default function PrivacyPage() {
   return (

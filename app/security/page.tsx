@@ -2,11 +2,13 @@ import Link from 'next/link'
 import { Sparkles, ArrowLeft, Shield, Lock, Server, Eye, CheckCircle2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Footer } from '@/components/footer'
+import { generateMetadata as createMetadata } from '@/lib/seo'
 
-export const metadata = {
-  title: 'Security - Priszm',
-  description: 'Learn about Priszm security practices and compliance.',
-}
+export const metadata = createMetadata({
+  title: 'Security',
+  description: 'Learn about Priszm security practices and compliance. SOC 2 certified, GDPR compliant, and enterprise-grade data protection.',
+  keywords: ['security', 'SOC 2', 'GDPR', 'data protection', 'compliance'],
+})
 
 const certifications = [
   { name: 'SOC 2 Type II', description: 'Annual third-party security audits' },

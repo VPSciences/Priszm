@@ -2,11 +2,14 @@ import Link from 'next/link'
 import { Sparkles, ArrowLeft } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Footer } from '@/components/footer'
+import { generateMetadata as createMetadata } from '@/lib/seo'
 
-export const metadata = {
-  title: 'Terms of Service - Priszm',
-  description: 'Priszm terms of service and usage agreement.',
-}
+export const metadata = createMetadata({
+  title: 'Terms of Service',
+  description: 'Priszm terms of service and usage agreement. Read our terms and conditions for using our AI-powered lead generation services.',
+  keywords: ['terms of service', 'user agreement', 'service terms'],
+  noIndex: false,
+})
 
 export default function TermsPage() {
   return (

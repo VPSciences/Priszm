@@ -2,11 +2,13 @@ import Link from 'next/link'
 import { Sparkles, ArrowLeft, MapPin, Clock, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Footer } from '@/components/footer'
+import { generateMetadata as createMetadata } from '@/lib/seo'
 
-export const metadata = {
-  title: 'Careers - Priszm',
-  description: 'Join the Priszm team and help revolutionize lead generation with AI.',
-}
+export const metadata = createMetadata({
+  title: 'Careers',
+  description: 'Join the Priszm team and help revolutionize lead generation with AI. Explore open positions and grow your career with us.',
+  keywords: ['Priszm careers', 'AI jobs', 'lead generation jobs', 'remote tech jobs'],
+})
 
 const openings = [
   {
