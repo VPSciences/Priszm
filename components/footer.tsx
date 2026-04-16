@@ -1,24 +1,12 @@
 import Link from 'next/link'
-import { Sparkles } from 'lucide-react'
+import { Sparkles, Mail, Linkedin, Twitter } from 'lucide-react'
 
 const footerLinks = {
-  // Product: [
-  //   { name: 'Features', href: '#capabilities' },
-  //   { name: 'Pricing', href: '#pricing' },
-  //   { name: 'Integrations', href: '#integrations' },
-  //   { name: 'API', href: '#' },
-  // ],
   Company: [
     { name: 'About', href: '/about' },
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ],
-  // Resources: [
-  //   { name: 'Documentation', href: '#' },
-  //   { name: 'Help Center', href: '#' },
-  //   { name: 'Community', href: '#' },
-  //   { name: 'Status', href: '#' },
-  // ],
   Legal: [
     { name: 'Privacy', href: '/privacy' },
     { name: 'Terms', href: '/terms' },
@@ -30,7 +18,7 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-card">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-24">
           {/* Logo and description */}
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2">
@@ -62,6 +50,48 @@ export function Footer() {
               </ul>
             </div>
           ))}
+
+          {/* Get in Touch section */}
+          <div>
+            <h3 className="text-sm font-semibold text-foreground">Get in Touch</h3>
+            <div className="mt-4 space-y-4">
+              {/* LinkedIn profile card */}
+              <Link 
+                href="https://www.linkedin.com/in/joseph-barkate/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-3 rounded-lg border border-border bg-secondary/30 hover:bg-secondary/50 transition-colors"
+              >
+                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#0A66C2] text-white">
+                  <Linkedin className="w-5 h-5" />
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-foreground">Joseph Barkate</p>
+                  <p className="text-xs text-muted-foreground">Connect on LinkedIn</p>
+                </div>
+              </Link>
+
+              {/* Twitter */}
+              <Link 
+                href="https://x.com/joe_barkate" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Twitter className="w-4 h-4" />
+                <span>@joe_barkate</span>
+              </Link>
+
+              {/* Email */}
+              <Link 
+                href="mailto:joe@priszm.ai"
+                className="flex items-center gap-3 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Mail className="w-4 h-4" />
+                <span>joe@priszm.ai</span>
+              </Link>
+            </div>
+          </div>
         </div>
 
         {/* Bottom bar */}
@@ -70,14 +100,21 @@ export function Footer() {
             © {new Date().getFullYear()} Priszm. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link 
+              href="https://x.com/joe_barkate" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
               Twitter
             </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link 
+              href="https://www.linkedin.com/in/joseph-barkate/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
               LinkedIn
-            </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              GitHub
             </Link>
           </div>
         </div>
