@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://priszm.ai'
 const SITE_NAME = 'Priszm'
-const DEFAULT_OG_IMAGE = '/og-image.jpg'
+const DEFAULT_OG_IMAGE = '/og-image.png'
 
 export interface SEOConfig {
   title: string
