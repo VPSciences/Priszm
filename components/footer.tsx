@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Mail } from 'lucide-react'
+import { Mail, Sparkles } from 'lucide-react'
 
 const footerLinks = {
   Company: [
@@ -23,13 +23,9 @@ export function Footer() {
           {/* Logo and description */}
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2">
-              <Image
-                src="/priszm-logo.jpg"
-                alt="Priszm"
-                width={32}
-                height={32}
-                className="rounded-lg"
-              />
+              <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-foreground">
+                <Sparkles className="w-4 h-4 text-background" />
+              </div>
               <span className="text-xl font-bold text-foreground">Priszm</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
