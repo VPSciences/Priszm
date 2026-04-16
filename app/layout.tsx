@@ -17,6 +17,28 @@ export const metadata: Metadata = {
   title: 'Priszm - AI-Powered Lead Generation Agency',
   description: 'Transform your business with AI-powered lead generation. Automate prospecting, increase revenue, and scale your growth with Priszm.',
   keywords: ['lead generation', 'AI', 'automation', 'business growth', 'sales automation', 'B2B leads'],
+  openGraph: {
+    title: 'Priszm - AI-Powered Lead Generation',
+    description: 'Transform your business with AI-powered lead generation. Automate prospecting, increase revenue, and scale your growth.',
+    url: 'https://priszm.ai',
+    siteName: 'Priszm',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Priszm - AI-Powered Lead Generation Agency',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Priszm - AI-Powered Lead Generation',
+    description: 'Transform your business with AI-powered lead generation. Automate prospecting, increase revenue, and scale your growth.',
+    images: ['/og-image.jpg'],
+  },
 }
 
 export default function RootLayout({
