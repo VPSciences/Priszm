@@ -2,29 +2,27 @@ import Link from 'next/link'
 import { Sparkles } from 'lucide-react'
 
 const footerLinks = {
-  Product: [
-    { name: 'Features', href: '#capabilities' },
-    { name: 'Pricing', href: '#pricing' },
-    { name: 'Integrations', href: '#integrations' },
-    { name: 'API', href: '#' },
-  ],
+  // Product: [
+  //   { name: 'Features', href: '#capabilities' },
+  //   { name: 'Pricing', href: '#pricing' },
+  //   { name: 'Integrations', href: '#integrations' },
+  //   { name: 'API', href: '#' },
+  // ],
   Company: [
-    { name: 'About', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Careers', href: '#' },
-    { name: 'Contact', href: '#' },
+    { name: 'About', href: '/about' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Contact', href: '/contact' },
   ],
-  Resources: [
-    { name: 'Documentation', href: '#' },
-    { name: 'Help Center', href: '#' },
-    { name: 'Community', href: '#' },
-    { name: 'Status', href: '#' },
-  ],
+  // Resources: [
+  //   { name: 'Documentation', href: '#' },
+  //   { name: 'Help Center', href: '#' },
+  //   { name: 'Community', href: '#' },
+  //   { name: 'Status', href: '#' },
+  // ],
   Legal: [
-    { name: 'Privacy', href: '#' },
-    { name: 'Terms', href: '#' },
-    { name: 'Security', href: '#' },
-    { name: 'Cookies', href: '#' },
+    { name: 'Privacy', href: '/privacy' },
+    { name: 'Terms', href: '/terms' },
+    { name: 'Security', href: '/security' },
   ],
 }
 
