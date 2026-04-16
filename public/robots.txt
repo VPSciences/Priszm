@@ -1,0 +1,12 @@
+# Priszm Robots.txt
+# https://priszm.ai
+
+User-agent: *
+Allow: /
+
+# Disallow auth pages from indexing
+Disallow: /login
+Disallow: /get-started
+
+# Sitemap location
+Sitemap: https://priszm.ai/sitemap.xml
