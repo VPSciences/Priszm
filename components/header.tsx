@@ -2,8 +2,9 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { Menu, X, Sparkles } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 const navigation = [
   { name: 'Capabilities', href: '#capabilities' },
@@ -20,9 +21,13 @@ export function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="/" className="flex items-center gap-2 -m-1.5 p-1.5">
-            <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-foreground">
-              <Sparkles className="w-4 h-4 text-background" />
-            </div>
+            <Image
+              src="/priszm-logo.jpg"
+              alt="Priszm"
+              width={32}
+              height={32}
+              className="rounded-md"
+            />
             <span className="text-xl font-bold text-foreground">Priszm</span>
           </Link>
         </div>
