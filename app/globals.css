@@ -93,11 +93,11 @@
   }
 }
 
-/* Grid background pattern */
+/* Grid background pattern - more faded */
 .grid-background {
   background-image: 
-    linear-gradient(to right, oklch(0.92 0 0) 1px, transparent 1px),
-    linear-gradient(to bottom, oklch(0.92 0 0) 1px, transparent 1px);
+    linear-gradient(to right, oklch(0.95 0 0) 1px, transparent 1px),
+    linear-gradient(to bottom, oklch(0.95 0 0) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 

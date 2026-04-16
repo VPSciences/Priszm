@@ -20,7 +20,7 @@ export function CTA() {
                 Start free trial
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button variant="outline" size="lg" className="h-12 px-8 border-background/20 text-background hover:bg-background/10">
+              <Button variant="outline" size="lg" className="h-12 px-8 border-background/30 text-background bg-transparent hover:bg-background/10">
                 Talk to sales
               </Button>
             </div>
