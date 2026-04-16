@@ -5,6 +5,7 @@ import { Mail } from 'lucide-react'
 const footerLinks = {
   Company: [
     { name: 'About', href: '/about' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ],
