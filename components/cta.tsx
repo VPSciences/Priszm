@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
@@ -16,12 +17,14 @@ export function CTA() {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-background text-foreground hover:bg-background/90 h-12 px-8">
-                Start free trial
-                <ArrowRight className="ml-2 h-4 w-4" />
+              <Button size="lg" className="bg-background text-foreground hover:bg-background/90 h-12 px-8" asChild>
+                <Link href="/get-started">
+                  Start free trial
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
-              <Button variant="outline" size="lg" className="h-12 px-8 border-background/30 text-background bg-transparent hover:bg-background/10">
-                Talk to sales
+              <Button variant="outline" size="lg" className="h-12 px-8 border-background/30 text-background bg-transparent hover:bg-background/10" asChild>
+                <Link href="/login">Talk to sales</Link>
               </Button>
             </div>
 

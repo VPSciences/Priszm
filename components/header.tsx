@@ -57,11 +57,11 @@ export function Header() {
         </div>
         
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
-          <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
-            Log in
+          <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground" asChild>
+            <Link href="/login">Log in</Link>
           </Button>
-          <Button size="sm" className="bg-foreground text-background hover:bg-foreground/90">
-            Get Started
+          <Button size="sm" className="bg-foreground text-background hover:bg-foreground/90" asChild>
+            <Link href="/get-started">Get Started</Link>
           </Button>
         </div>
       </nav>
@@ -81,11 +81,11 @@ export function Header() {
               </Link>
             ))}
             <div className="mt-4 flex flex-col gap-2">
-              <Button variant="ghost" className="w-full justify-center">
-                Log in
+              <Button variant="ghost" className="w-full justify-center" asChild>
+                <Link href="/login">Log in</Link>
               </Button>
-              <Button className="w-full justify-center bg-foreground text-background">
-                Get Started
+              <Button className="w-full justify-center bg-foreground text-background" asChild>
+                <Link href="/get-started">Get Started</Link>
               </Button>
             </div>
           </div>
