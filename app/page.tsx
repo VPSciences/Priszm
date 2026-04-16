@@ -7,7 +7,7 @@ import { Metrics } from '@/components/metrics'
 import { Integrations } from '@/components/integrations'
 import { Security } from '@/components/security'
 import { Testimonials } from '@/components/testimonials'
-import { Pricing } from '@/components/pricing'
+
 import { FAQ } from '@/components/faq'
 import { CTA } from '@/components/cta'
 import { Footer } from '@/components/footer'
@@ -24,7 +24,6 @@ export default function Home() {
       <Integrations />
       <Security />
       <Testimonials />
-      <Pricing />
       <FAQ />
       <CTA />
       <Footer />

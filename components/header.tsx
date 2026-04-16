@@ -10,7 +10,6 @@ const navigation = [
   { name: 'Process', href: '#process' },
   { name: 'Results', href: '#results' },
   { name: 'Integrations', href: '#integrations' },
-  { name: 'Pricing', href: '#pricing' },
 ]
 
 export function Header() {
@@ -28,11 +27,7 @@ export function Header() {
           </Link>
         </div>
 
-        <div className="hidden lg:flex lg:items-center">
-          <div className="px-4 py-1.5 rounded-full bg-secondary/50 border border-border text-sm text-muted-foreground">
-            The platform for modern teams
-          </div>
-        </div>
+
         
         <div className="flex lg:hidden">
           <button

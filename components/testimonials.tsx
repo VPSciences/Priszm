@@ -1,138 +1,127 @@
 'use client'
 
-import { useState } from 'react'
-import { ChevronLeft, ChevronRight, Quote } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { Twitter } from 'lucide-react'
 
 const testimonials = [
   {
-    quote: "Priszm transformed our entire sales pipeline. We went from struggling to find leads to having more qualified prospects than we can handle.",
+    quote: "Just switched our entire lead gen stack to @priszm. 3 weeks in and we've already booked 40% more demos. The AI actually understands our ICP.",
     author: 'Sarah Chen',
-    title: 'VP of Sales, TechScale',
-    result: '10x more qualified leads',
+    handle: '@sarahchen_sales',
     avatar: 'SC',
   },
   {
-    quote: "The AI accuracy is incredible. It&apos;s like having a team of researchers working 24/7 to find our ideal customers.",
+    quote: "Been in sales for 15 years. Never seen anything like @priszm. It found leads we never would have discovered manually. Game changer.",
     author: 'Marcus Johnson',
-    title: 'Founder, GrowthLab',
-    result: '85% time saved on prospecting',
+    handle: '@marcusj_growth',
     avatar: 'MJ',
   },
   {
-    quote: "We tried every lead gen tool on the market. Priszm is the only one that actually delivers on its promises.",
+    quote: "Our SDRs used to spend 70% of their time prospecting. Now they spend 90% of their time actually selling. Thanks @priszm",
     author: 'Emily Rodriguez',
-    title: 'Head of Growth, Nexus',
-    result: '$2M+ pipeline generated',
+    handle: '@emilyrod_nexus',
     avatar: 'ER',
   },
   {
-    quote: "The integration with our existing CRM was seamless. Leads just flow in automatically, enriched and ready to contact.",
+    quote: "The ROI on @priszm is insane. We're paying 1/10th of what we spent on lead lists and getting 5x better results. Do the math.",
     author: 'David Kim',
-    title: 'Sales Director, CloudFirst',
-    result: '300% ROI in 3 months',
+    handle: '@davidkim_cf',
     avatar: 'DK',
+  },
+  {
+    quote: "Finally, a lead gen tool that doesn't require a PhD to use. @priszm just works. Connected our CRM, set our ICP, and leads started flowing.",
+    author: 'Alex Turner',
+    handle: '@alexturner_io',
+    avatar: 'AT',
+  },
+  {
+    quote: "Closed our biggest deal ever last month from a lead @priszm found. A company we'd never heard of that was a perfect fit. Magic.",
+    author: 'Jessica Park',
+    handle: '@jesspark_saas',
+    avatar: 'JP',
+  },
+  {
+    quote: "We tried 6 different lead gen tools before @priszm. This is the only one our sales team actually uses every day. Says everything.",
+    author: 'Ryan Mitchell',
+    handle: '@ryanm_sales',
+    avatar: 'RM',
+  },
+  {
+    quote: "The intent signals from @priszm are scary accurate. We're reaching out to companies right when they need us. Perfect timing, every time.",
+    author: 'Lisa Wang',
+    handle: '@lisawang_rev',
+    avatar: 'LW',
   },
 ]
 
-const companies = [
-  'Meridian Labs',
-  'Flux Systems',
-  'Beacon AI',
-  'Prism Analytics',
-  'Nova Tech',
-  'Quantum Corp',
-  'Atlas Digital',
-  'Vertex Labs',
-]
+// Double the testimonials for seamless loop
+const doubledTestimonials = [...testimonials, ...testimonials]
 
 export function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-
-  const next = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-  }
-
-  const prev = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
-
-  const current = testimonials[currentIndex]
-
   return (
-    <section className="py-24 sm:py-32 bg-background">
+    <section className="py-24 sm:py-32 bg-background overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section header */}
-        <div className="flex items-center justify-between mb-12">
-          <div>
-            <p className="text-sm font-medium text-muted-foreground tracking-wider uppercase mb-3">What people say</p>
-            <div className="text-sm text-muted-foreground">
-              {String(currentIndex + 1).padStart(2, '0')} / {String(testimonials.length).padStart(2, '0')}
-            </div>
-          </div>
-          <div className="flex gap-2">
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={prev}
-              className="rounded-full border-border hover:bg-secondary"
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={next}
-              className="rounded-full border-border hover:bg-secondary"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </Button>
-          </div>
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <p className="text-sm font-medium text-muted-foreground tracking-wider uppercase mb-3">What people say</p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+            Loved by sales teams
+            <br />
+            <span className="text-muted-foreground">everywhere</span>
+          </h2>
         </div>
+      </div>
 
-        {/* Testimonial card */}
-        <div className="relative p-8 md:p-12 rounded-2xl bg-card border border-border">
-          <Quote className="absolute top-8 right-8 w-12 h-12 text-muted-foreground/10" />
-          
-          <blockquote className="text-2xl md:text-3xl font-medium text-foreground leading-relaxed max-w-3xl">
-            &ldquo;{current.quote}&rdquo;
-          </blockquote>
-
-          <div className="mt-8 flex items-center justify-between flex-wrap gap-6">
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-foreground font-semibold">
-                {current.avatar}
-              </div>
-              <div>
-                <div className="font-medium text-foreground">{current.author}</div>
-                <div className="text-sm text-muted-foreground">{current.title}</div>
-              </div>
-            </div>
-            
-            <div className="px-4 py-2 rounded-full bg-secondary border border-border">
-              <span className="text-sm font-medium text-foreground">Key Result: {current.result}</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Trusted by companies */}
-        <div className="mt-16">
-          <p className="text-sm text-muted-foreground text-center mb-8">Trusted by forward-thinking teams</p>
-          <div className="relative overflow-hidden">
-            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
-            
-            <div className="flex animate-marquee">
-              {[...companies, ...companies].map((company, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 mx-8 text-xl font-semibold text-muted-foreground/40"
-                >
-                  {company}
+      {/* First row - slides left */}
+      <div className="relative mb-6">
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
+        
+        <div className="flex animate-marquee-slow">
+          {doubledTestimonials.slice(0, 8).map((testimonial, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 w-[400px] mx-3 p-6 rounded-2xl bg-card border border-border"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-foreground text-sm font-semibold">
+                  {testimonial.avatar}
                 </div>
-              ))}
+                <div className="flex-1">
+                  <div className="font-medium text-foreground text-sm">{testimonial.author}</div>
+                  <div className="text-xs text-muted-foreground">{testimonial.handle}</div>
+                </div>
+                <Twitter className="w-4 h-4 text-muted-foreground" />
+              </div>
+              <p className="text-sm text-foreground leading-relaxed">{testimonial.quote}</p>
             </div>
-          </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Second row - slides right */}
+      <div className="relative">
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
+        
+        <div className="flex animate-marquee-slow-reverse">
+          {doubledTestimonials.slice(8, 16).map((testimonial, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 w-[400px] mx-3 p-6 rounded-2xl bg-card border border-border"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-foreground text-sm font-semibold">
+                  {testimonial.avatar}
+                </div>
+                <div className="flex-1">
+                  <div className="font-medium text-foreground text-sm">{testimonial.author}</div>
+                  <div className="text-xs text-muted-foreground">{testimonial.handle}</div>
+                </div>
+                <Twitter className="w-4 h-4 text-muted-foreground" />
+              </div>
+              <p className="text-sm text-foreground leading-relaxed">{testimonial.quote}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
