@@ -2,11 +2,13 @@ import Link from 'next/link'
 import { Sparkles, ArrowLeft, Target, Zap, Users, Heart } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Footer } from '@/components/footer'
+import { generateMetadata as createMetadata } from '@/lib/seo'
 
-export const metadata = {
-  title: 'About - Priszm',
-  description: 'Learn about Priszm and our mission to revolutionize lead generation with AI.',
-}
+export const metadata = createMetadata({
+  title: 'About',
+  description: 'Learn about Priszm and our mission to revolutionize lead generation with AI. Discover our story, values, and the team behind the platform.',
+  keywords: ['about Priszm', 'lead generation company', 'AI sales team'],
+})
 
 const values = [
   {

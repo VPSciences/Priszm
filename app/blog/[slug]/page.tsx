@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react'
 import { Footer } from '@/components/footer'
+import { generateBlogMetadata, generateBlogStructuredData } from '@/lib/seo'
 
 // Sample blog posts data - replace with your CMS or database
 const blogPosts: Record<string, {
@@ -97,13 +98,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = blogPosts[slug]
   
   if (!post) {
-    return { title: 'Post Not Found - Priszm Blog' }
+    return { title: 'Post Not Found | Priszm Blog' }
   }
   
-  return {
-    title: `${post.title} - Priszm Blog`,
-    description: post.excerpt,
-  }
+  return generateBlogMetadata({
+    title: post.title,
+    excerpt: post.excerpt,
+    image: post.image,
+    date: post.date,
+    author: post.author,
+    category: post.category,
+    slug,
+  })
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -123,8 +129,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     )
   }
 
+  const structuredData = generateBlogStructuredData({
+    title: post.title,
+    excerpt: post.excerpt,
+    image: post.image,
+    date: post.date,
+    author: post.author,
+    slug,
+  })
+
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Header */}
       <header className="border-b border-border bg-background">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">

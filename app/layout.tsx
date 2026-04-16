@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { generateMetadata as createMetadata, organizationStructuredData } from '@/lib/seo'
 import './globals.css'
 
 const inter = Inter({ 
@@ -13,33 +14,11 @@ const geistMono = Geist_Mono({
   variable: '--font-geist-mono'
 })
 
-export const metadata: Metadata = {
-  title: 'Priszm - AI-Powered Lead Generation Agency',
+export const metadata: Metadata = createMetadata({
+  title: 'Home',
   description: 'Transform your business with AI-powered lead generation. Automate prospecting, increase revenue, and scale your growth with Priszm.',
-  keywords: ['lead generation', 'AI', 'automation', 'business growth', 'sales automation', 'B2B leads'],
-  openGraph: {
-    title: 'Priszm - AI-Powered Lead Generation',
-    description: 'Transform your business with AI-powered lead generation. Automate prospecting, increase revenue, and scale your growth.',
-    url: 'https://priszm.ai',
-    siteName: 'Priszm',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Priszm - AI-Powered Lead Generation Agency',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Priszm - AI-Powered Lead Generation',
-    description: 'Transform your business with AI-powered lead generation. Automate prospecting, increase revenue, and scale your growth.',
-    images: ['/og-image.jpg'],
-  },
-}
+  keywords: ['AI lead generation agency', 'automated prospecting', 'B2B sales automation'],
+})
 
 export default function RootLayout({
   children,
@@ -49,6 +28,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-background">
       <body className={`${inter.variable} ${geistMono.variable} font-sans antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+        />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

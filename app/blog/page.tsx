@@ -67,12 +67,15 @@ const blogPosts = [
   },
 ]
 
+import { generateMetadata as createMetadata } from '@/lib/seo'
+
 const categories = ['All', 'Industry Insights', 'Best Practices', 'Guides', 'Case Studies']
 
-export const metadata = {
-  title: 'Blog - Priszm',
-  description: 'Insights, guides, and best practices for AI-powered lead generation and sales automation.',
-}
+export const metadata = createMetadata({
+  title: 'Blog',
+  description: 'Insights, guides, and best practices for AI-powered lead generation and sales automation. Learn how to grow your pipeline with Priszm.',
+  keywords: ['lead generation blog', 'B2B sales tips', 'AI marketing insights', 'sales automation guides'],
+})
 
 export default function BlogPage() {
   return (

@@ -3,11 +3,13 @@ import { Sparkles, ArrowLeft, Mail, MessageSquare, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Footer } from '@/components/footer'
+import { generateMetadata as createMetadata } from '@/lib/seo'
 
-export const metadata = {
-  title: 'Contact - Priszm',
-  description: 'Get in touch with the Priszm team.',
-}
+export const metadata = createMetadata({
+  title: 'Contact',
+  description: 'Get in touch with the Priszm team. Have questions about AI-powered lead generation? We would love to hear from you.',
+  keywords: ['contact Priszm', 'lead generation consultation', 'sales inquiry'],
+})
 
 export default function ContactPage() {
   return (
