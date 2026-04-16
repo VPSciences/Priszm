@@ -8,7 +8,7 @@ import { Menu, X, Sparkles } from 'lucide-react'
 const navigation = [
   { name: 'Capabilities', href: '#capabilities' },
   { name: 'Process', href: '#process' },
-  { name: 'Results', href: '#results' },
+  { name: 'How It Works', href: '#workflow' },
   { name: 'Integrations', href: '#integrations' },
 ]
 

@@ -2,7 +2,7 @@ import { Header } from '@/components/header'
 import { Hero } from '@/components/hero'
 import { Capabilities } from '@/components/capabilities'
 import { Process } from '@/components/process'
-import { Results } from '@/components/results'
+import { Workflow } from '@/components/workflow'
 import { Metrics } from '@/components/metrics'
 import { Integrations } from '@/components/integrations'
 import { Security } from '@/components/security'
@@ -19,7 +19,7 @@ export default function Home() {
       <Hero />
       <Capabilities />
       <Process />
-      <Results />
+      <Workflow />
       <Metrics />
       <Integrations />
       <Security />
