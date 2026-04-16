@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Mail, Sparkles } from 'lucide-react'
+import { Sparkles, Mail } from 'lucide-react'
 
 const footerLinks = {
   Company: [
