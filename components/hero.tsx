@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Play, Zap, Target, TrendingUp, Users } from 'lucide-react'
+import { ArrowRight, Zap, Target, TrendingUp, Users } from 'lucide-react'
 
 const stats = [
   { value: '10x', label: 'More leads', company: 'SALESFORCE' },
@@ -37,14 +37,15 @@ export function Hero() {
           {/* CTA buttons */}
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="bg-foreground text-background hover:bg-foreground/90 h-12 px-8 text-base" asChild>
-              <Link href="/get-started">
-                Start free trial
+              <Link href="/contact">
+                Book a Call
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="h-12 px-8 text-base border-border hover:bg-secondary">
-              <Play className="mr-2 h-4 w-4" />
-              Watch demo
+            <Button variant="outline" size="lg" className="h-12 px-8 text-base border-border hover:bg-secondary" asChild>
+              <Link href="#workflow">
+                See How It Works
+              </Link>
             </Button>
           </div>
         </div>
