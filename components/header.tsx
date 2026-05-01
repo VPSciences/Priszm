@@ -7,10 +7,10 @@ import { Button } from '@/components/ui/button'
 import { Menu, X } from 'lucide-react'
 
 const navigation = [
-  { name: 'Capabilities', href: '#capabilities' },
+  { name: 'Services', href: '#capabilities' },
   { name: 'Process', href: '#process' },
   { name: 'How It Works', href: '#workflow' },
-  { name: 'Integrations', href: '#integrations' },
+  { name: 'The Stack', href: '#integrations' },
 ]
 
 export function Header() {
@@ -32,8 +32,6 @@ export function Header() {
           </Link>
         </div>
 
-
-        
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -48,7 +46,7 @@ export function Header() {
             )}
           </button>
         </div>
-        
+
         <div className="hidden lg:flex lg:gap-x-8">
           {navigation.map((item) => (
             <Link
@@ -60,13 +58,10 @@ export function Header() {
             </Link>
           ))}
         </div>
-        
+
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
-          <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground" asChild>
-            <Link href="/login">Log in</Link>
-          </Button>
           <Button size="sm" className="bg-foreground text-background hover:bg-foreground/90" asChild>
-            <Link href="/get-started">Get Started</Link>
+            <Link href="mailto:joe@priszm.ai">Get in touch</Link>
           </Button>
         </div>
       </nav>
@@ -86,11 +81,8 @@ export function Header() {
               </Link>
             ))}
             <div className="mt-4 flex flex-col gap-2">
-              <Button variant="ghost" className="w-full justify-center" asChild>
-                <Link href="/login">Log in</Link>
-              </Button>
               <Button className="w-full justify-center bg-foreground text-background" asChild>
-                <Link href="/get-started">Get Started</Link>
+                <Link href="mailto:joe@priszm.ai">Get in touch</Link>
               </Button>
             </div>
           </div>

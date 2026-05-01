@@ -9,28 +9,28 @@ import {
 
 const faqs = [
   {
-    question: 'How does Priszm find leads?',
-    answer: 'Our AI scans millions of data points across the web, social platforms, and proprietary databases to identify prospects that match your ideal customer profile. We analyze company data, buying signals, intent data, and behavioral patterns to surface the most qualified leads.',
+    question: 'Is this right for my type of business?',
+    answer: 'We work with owner-operators in pest control, landscaping, HVAC, cleaning, roofing, and general contracting. If you run crews, manage routes, and rely on inbound calls and referrals — this is built for you. If you\'re not sure, get on a call with us. We\'ll tell you honestly.',
   },
   {
-    question: 'What integrations do you support?',
-    answer: 'We integrate with all major CRMs (Salesforce, HubSpot, Pipedrive), email providers (Gmail, Outlook), communication tools (Slack), and automation platforms (Zapier). We\'re constantly adding new integrations based on customer feedback.',
+    question: 'What exactly is included?',
+    answer: 'Depends on what you need. We typically build: Google Business Profile optimization, automated review requests, lead follow-up sequences (email + SMS), and targeted outreach campaigns. We\'ll tell you specifically what we\'d build for your business on the intro call — no generic packages.',
   },
   {
-    question: 'How accurate is the lead data?',
-    answer: 'Our AI-powered data enrichment achieves 95%+ accuracy for contact information. We verify email addresses in real-time and continuously update our database to ensure you\'re always working with fresh, accurate data.',
+    question: 'How fast can we get started?',
+    answer: 'Usually 1–2 weeks from our first call to launch. We handle all the setup. You don\'t need to install software, learn new tools, or manage a dashboard. We send you a monthly report and you focus on the jobs.',
   },
   {
-    question: 'Can I cancel anytime?',
-    answer: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees. If you cancel, you\'ll retain access until the end of your current billing period.',
+    question: 'What does it cost?',
+    answer: 'We don\'t publish pricing because every business is different. Service area size, what systems you already have, and what you\'re trying to accomplish all affect scope. Get on a call with us — we\'ll be straight with you about what makes sense.',
   },
   {
-    question: 'Is my data secure?',
-    answer: 'Absolutely. We\'re SOC 2 Type II certified and fully compliant with GDPR and CCPA. All data is encrypted at rest (AES-256) and in transit (TLS 1.3). We never sell or share your lead data with third parties.',
+    question: 'Do I have to learn any software?',
+    answer: 'No. That\'s the whole point. We build and operate the systems. You get more calls and book more jobs. You\'ll get a simple monthly report showing what\'s working — that\'s it.',
   },
   {
-    question: 'Do you offer a free trial?',
-    answer: 'Yes! Our Starter plan is completely free and includes up to 100 leads per month. For Growth plans, we offer a 14-day free trial with full access to all features. No credit card required.',
+    question: 'What if it doesn\'t work?',
+    answer: 'We fix it. This is a done-for-you service, not a software subscription. If the system isn\'t performing, we\'re the ones responsible for figuring out why and making changes. Your success is how we stay in business.',
   },
 ]
 
@@ -42,7 +42,7 @@ export function FAQ() {
         <div className="text-center mb-12">
           <p className="text-sm font-medium text-muted-foreground tracking-wider uppercase mb-3">FAQ</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-            Frequently asked questions
+            Questions we get asked
           </h2>
         </div>
 

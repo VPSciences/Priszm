@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = createMetadata({
   title: 'Home',
-  description: 'Transform your business with AI-powered lead generation. Automate prospecting, increase revenue, and scale your growth with Priszm.',
-  keywords: ['AI lead generation agency', 'automated prospecting', 'B2B sales automation'],
+  description: 'Priszm helps pest control, landscaping, HVAC, and roofing companies get more booked jobs. Done-for-you lead generation, review automation, and Google optimization.',
+  keywords: ['pest control marketing', 'landscaping lead generation', 'HVAC leads', 'roofing leads', 'blue-collar marketing agency', 'done-for-you lead generation'],
 })
 
 export default function RootLayout({

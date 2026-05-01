@@ -1,63 +1,60 @@
 'use client'
 
-import { 
-  Globe, 
-  Linkedin, 
-  Mail, 
-  MessageSquare, 
-  Database, 
-  Brain, 
-  Target, 
-  Users, 
-  Zap,
+import {
+  Globe,
+  Star,
+  Mail,
+  MessageSquare,
+  Search,
+  Phone,
   ArrowRight,
   CheckCircle2,
-  Bot,
+  Wrench,
   BarChart3,
   Handshake
 } from 'lucide-react'
 
 const leadSources = [
-  { icon: Linkedin, label: 'LinkedIn' },
-  { icon: Globe, label: 'Web Scraping' },
-  { icon: Mail, label: 'Email Lists' },
-  { icon: MessageSquare, label: 'Social Media' },
-  { icon: Target, label: 'Paid Ads' },
-  { icon: Database, label: 'Databases' },
+  { icon: Search, label: 'Google Maps' },
+  { icon: Globe, label: 'Google Ads' },
+  { icon: Mail, label: 'Cold Email' },
+  { icon: Star, label: 'Review Platforms' },
+  { icon: MessageSquare, label: 'SMS Follow-up' },
+  { icon: Phone, label: 'Local SEO' },
 ]
 
 const workflowSteps = [
   {
     step: '01',
-    title: 'Multi-Channel Capture',
-    description: 'We tap into every lead source available - LinkedIn, Google, paid ads, social media, industry databases, and more.',
-    features: ['LinkedIn prospecting', 'Google Maps scraping', 'Social listening', 'Ad campaign leads'],
+    title: 'Audit & Strategy',
+    description: 'We look at your Google presence, reviews, competition, and current lead flow. We tell you exactly what\'s broken and what we\'d fix first.',
+    features: ['Google Business Profile audit', 'Competitor review analysis', 'Current lead flow review', 'Prioritized action plan'],
   },
   {
     step: '02',
-    title: 'AI Enrichment & Scoring',
-    description: 'Our AI enriches each lead with company data, tech stack, revenue estimates, and scores them against your ideal customer profile.',
-    features: ['Company intel', 'Tech stack detection', 'ICP scoring', 'Intent signals'],
+    title: 'System Build',
+    description: 'We set up review automation, lead follow-up sequences, Google presence, and outreach campaigns. Usually live in two weeks.',
+    features: ['Review request automation', 'SMS + email follow-up', 'Google profile optimization', 'Outreach campaign setup'],
   },
   {
     step: '03',
-    title: 'Automated Outreach',
-    description: 'Personalized multi-channel sequences run 24/7 - email, LinkedIn, SMS - all crafted by AI to maximize response rates.',
-    features: ['Hyper-personalization', 'Multi-touch sequences', 'A/B testing', 'Optimal timing'],
+    title: 'Outreach & Inbound',
+    description: 'Automated systems find new customers and follow up with every inbound inquiry. No lead goes cold. No callback falls through the cracks.',
+    features: ['Cold outreach running', 'Auto follow-up active', 'Review requests sending', 'Inbound response automation'],
   },
   {
     step: '04',
-    title: 'AI Qualification',
-    description: 'AI agents handle responses, answer questions, and qualify leads in real-time before booking meetings on your calendar.',
-    features: ['24/7 response handling', 'Smart qualification', 'Meeting scheduling', 'CRM sync'],
+    title: 'Ongoing Management',
+    description: 'We watch the numbers, test what\'s working, and keep improving. You get a monthly report. We do the work.',
+    features: ['Monthly results report', 'Campaign optimization', 'New opportunities flagged', 'Direct access to Joe'],
   },
 ]
 
 const outcomes = [
-  { value: '3-5x', label: 'More qualified meetings' },
-  { value: '40%', label: 'Lower cost per lead' },
-  { value: '24/7', label: 'Autonomous operation' },
-  { value: '2 weeks', label: 'To full deployment' },
+  { value: 'More jobs', label: 'booked week over week' },
+  { value: 'Zero', label: 'cold calling by you' },
+  { value: '2 weeks', label: 'average time to launch' },
+  { value: '100%', label: 'done for you' },
 ]
 
 export function Workflow() {
@@ -68,21 +65,21 @@ export function Workflow() {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-sm font-medium text-muted-foreground tracking-wider uppercase mb-3">How It Works</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-            Your fully autonomous
+            Your fully automated
             <br />
-            <span className="text-muted-foreground">lead generation engine.</span>
+            <span className="text-muted-foreground">lead system.</span>
           </h2>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-            We build and operate the entire system for you. From capturing leads across every channel to AI-powered qualification - all running on autopilot.
+            We build and run it. You answer the phone and book the jobs.
           </p>
         </div>
 
-        {/* Lead sources marquee */}
+        {/* Lead sources */}
         <div className="mb-20">
-          <p className="text-center text-sm text-muted-foreground mb-6">We capture leads from everywhere</p>
+          <p className="text-center text-sm text-muted-foreground mb-6">We build across all of these channels</p>
           <div className="flex flex-wrap justify-center gap-4">
             {leadSources.map((source) => (
-              <div 
+              <div
                 key={source.label}
                 className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border"
               >
@@ -95,15 +92,12 @@ export function Workflow() {
 
         {/* Main workflow diagram */}
         <div className="relative">
-          {/* Connecting line - desktop */}
           <div className="hidden lg:block absolute top-24 left-[calc(12.5%+20px)] right-[calc(12.5%+20px)] h-0.5 bg-gradient-to-r from-border via-foreground/20 to-border" />
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4">
             {workflowSteps.map((step, index) => (
               <div key={step.step} className="relative">
-                {/* Step card */}
                 <div className="p-6 rounded-2xl bg-card border border-border h-full">
-                  {/* Step number with icon */}
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 rounded-xl bg-foreground text-background flex items-center justify-center font-bold text-lg">
                       {step.step}
@@ -112,11 +106,10 @@ export function Workflow() {
                       <ArrowRight className="w-5 h-5 text-muted-foreground hidden lg:block absolute -right-4 top-9 z-10 bg-secondary/30" />
                     )}
                   </div>
-                  
+
                   <h3 className="text-lg font-semibold text-foreground mb-2">{step.title}</h3>
                   <p className="text-sm text-muted-foreground mb-4">{step.description}</p>
-                  
-                  {/* Features list */}
+
                   <ul className="space-y-2">
                     {step.features.map((feature) => (
                       <li key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -134,55 +127,50 @@ export function Workflow() {
         {/* Visual flow diagram */}
         <div className="mt-20 p-8 rounded-2xl bg-card border border-border">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-            {/* Input */}
             <div className="flex-1 text-center lg:text-left">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-secondary mb-4">
-                <Users className="w-8 h-8 text-foreground" />
+                <Search className="w-8 h-8 text-foreground" />
               </div>
-              <h4 className="font-semibold text-foreground mb-2">Your Target Market</h4>
-              <p className="text-sm text-muted-foreground">Tell us who your ideal customers are</p>
+              <h4 className="font-semibold text-foreground mb-2">Your Service Area</h4>
+              <p className="text-sm text-muted-foreground">Tell us who you want to reach</p>
             </div>
 
-            {/* Arrow */}
             <div className="hidden lg:flex items-center">
               <div className="w-16 h-0.5 bg-border" />
-              <Zap className="w-6 h-6 text-foreground mx-2" />
+              <Wrench className="w-6 h-6 text-foreground mx-2" />
               <div className="w-16 h-0.5 bg-border" />
             </div>
             <div className="lg:hidden flex items-center justify-center">
               <ArrowRight className="w-6 h-6 text-muted-foreground rotate-90" />
             </div>
 
-            {/* Priszm AI */}
             <div className="flex-1 text-center">
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-foreground mb-4">
-                <Brain className="w-10 h-10 text-background" />
+                <div className="text-2xl font-bold text-background">P</div>
               </div>
-              <h4 className="font-semibold text-foreground mb-2">Priszm AI Engine</h4>
-              <p className="text-sm text-muted-foreground">Autonomous lead generation system</p>
+              <h4 className="font-semibold text-foreground mb-2">Priszm Builds It</h4>
+              <p className="text-sm text-muted-foreground">Done-for-you system, running 24/7</p>
               <div className="flex items-center justify-center gap-2 mt-3">
-                <Bot className="w-4 h-4 text-muted-foreground" />
-                <span className="text-xs text-muted-foreground">Always running</span>
+                <BarChart3 className="w-4 h-4 text-muted-foreground" />
+                <span className="text-xs text-muted-foreground">Monthly reporting included</span>
               </div>
             </div>
 
-            {/* Arrow */}
             <div className="hidden lg:flex items-center">
               <div className="w-16 h-0.5 bg-border" />
-              <Zap className="w-6 h-6 text-foreground mx-2" />
+              <Wrench className="w-6 h-6 text-foreground mx-2" />
               <div className="w-16 h-0.5 bg-border" />
             </div>
             <div className="lg:hidden flex items-center justify-center">
               <ArrowRight className="w-6 h-6 text-muted-foreground rotate-90" />
             </div>
 
-            {/* Output */}
             <div className="flex-1 text-center lg:text-right">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-secondary mb-4">
                 <Handshake className="w-8 h-8 text-foreground" />
               </div>
-              <h4 className="font-semibold text-foreground mb-2">Qualified Meetings</h4>
-              <p className="text-sm text-muted-foreground">Ready-to-close leads on your calendar</p>
+              <h4 className="font-semibold text-foreground mb-2">Booked Jobs</h4>
+              <p className="text-sm text-muted-foreground">You close the work. We handle the rest.</p>
             </div>
           </div>
         </div>

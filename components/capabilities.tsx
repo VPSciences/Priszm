@@ -1,41 +1,41 @@
-import { Brain, Mail, BarChart3, Shield, Zap, Database } from 'lucide-react'
+import { MapPin, Star, MessageSquare, Search, Megaphone, FileText } from 'lucide-react'
 
 const capabilities = [
   {
     number: '01',
-    icon: Brain,
-    title: 'AI Lead Discovery',
-    description: 'Our AI scans millions of data points to identify prospects that match your ideal customer profile with 95% accuracy.',
+    icon: MapPin,
+    title: 'Google Maps Rankings',
+    description: 'Most service businesses don\'t show up when locals search. We optimize your Google Business Profile and get you into the map pack where the calls come from.',
   },
   {
     number: '02',
-    icon: Mail,
-    title: 'Automated Outreach',
-    description: 'Personalized email sequences that adapt in real-time based on engagement, increasing response rates by 3x.',
+    icon: Star,
+    title: 'Review Generation',
+    description: 'Reviews are your online word of mouth. We build the automated system that asks every customer at the right time — and actually gets responses.',
   },
   {
     number: '03',
-    icon: BarChart3,
-    title: 'Predictive Analytics',
-    description: 'Know which leads are most likely to convert before you even reach out. Focus on what matters.',
+    icon: MessageSquare,
+    title: 'Lead Follow-Up',
+    description: 'Most leads don\'t book on the first contact. We build automated follow-up — text and email — that runs while you\'re on the job.',
   },
   {
     number: '04',
-    icon: Shield,
-    title: 'Data Enrichment',
-    description: 'Automatically enrich your leads with verified contact info, company data, and buying signals.',
+    icon: Search,
+    title: 'Cold Outreach',
+    description: 'We find homeowners and property managers who need your service and put you in front of them before they call your competitor.',
   },
   {
     number: '05',
-    icon: Zap,
-    title: 'Intent Signals',
-    description: 'Detect when prospects are actively researching solutions like yours and strike while interest is high.',
+    icon: Megaphone,
+    title: 'Google Ads',
+    description: 'Paid campaigns built and managed for your trade and service area. No wasted budget on the wrong searches or the wrong zip codes.',
   },
   {
     number: '06',
-    icon: Database,
-    title: 'CRM Integration',
-    description: 'Seamlessly sync with your existing tools. Salesforce, HubSpot, Pipedrive — we integrate with them all.',
+    icon: FileText,
+    title: 'Local Content',
+    description: 'Google posts and social content that builds trust with locals. Consistent presence without you having to think about it.',
   },
 ]
 
@@ -45,11 +45,11 @@ export function Capabilities() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section header */}
         <div className="max-w-2xl">
-          <p className="text-sm font-medium text-muted-foreground tracking-wider uppercase mb-3">Capabilities</p>
+          <p className="text-sm font-medium text-muted-foreground tracking-wider uppercase mb-3">Services</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-            Everything you need.
+            Six things we do.
             <br />
-            <span className="text-muted-foreground">Nothing you don&apos;t.</span>
+            <span className="text-muted-foreground">All of them get you more jobs.</span>
           </h2>
         </div>
 
@@ -66,7 +66,7 @@ export function Capabilities() {
                   <capability.icon className="w-5 h-5" />
                 </div>
               </div>
-              
+
               <h3 className="text-lg font-semibold text-foreground mb-2">{capability.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{capability.description}</p>
             </div>

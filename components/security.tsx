@@ -1,27 +1,25 @@
-import { Shield, Lock, Eye, FileCheck } from 'lucide-react'
-
-const badges = ['SOC 2', 'ISO 27001', 'HIPAA', 'GDPR', 'CCPA']
+import { User, Calendar, Wrench, BarChart3 } from 'lucide-react'
 
 const features = [
   {
-    icon: Shield,
-    title: 'SOC 2 Type II',
-    description: 'Independently audited security controls with continuous monitoring.',
+    icon: User,
+    title: 'Founder-built, founder-run',
+    description: 'Joe builds every system. There\'s no handoff to a junior account manager after you sign up. You\'re working with the person doing the actual work.',
   },
   {
-    icon: Lock,
-    title: 'End-to-end encryption',
-    description: 'AES-256 encryption for data at rest and TLS 1.3 in transit.',
+    icon: Calendar,
+    title: 'Month to month',
+    description: 'No long-term contracts. If it\'s not working, you shouldn\'t have to keep paying for it. We earn your business every month.',
   },
   {
-    icon: Eye,
-    title: 'Zero-trust architecture',
-    description: 'Every request is authenticated and authorized. No exceptions.',
+    icon: Wrench,
+    title: 'Industry-specific, not generic',
+    description: 'We\'ve built systems for pest control, landscaping, HVAC, and roofing. We know your vocabulary, your seasonality, and your customers.',
   },
   {
-    icon: FileCheck,
-    title: 'GDPR & HIPAA',
-    description: 'Full compliance with data protection and healthcare regulations.',
+    icon: BarChart3,
+    title: 'Systems, not campaigns',
+    description: 'We don\'t run a campaign and disappear. We build infrastructure that keeps generating leads and optimize it month over month.',
   },
 ]
 
@@ -31,30 +29,18 @@ export function Security() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section header */}
         <div className="max-w-2xl mb-12">
-          <p className="text-sm font-medium text-muted-foreground tracking-wider uppercase mb-3">Security</p>
+          <p className="text-sm font-medium text-muted-foreground tracking-wider uppercase mb-3">Why Priszm</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-            Trust is
+            This isn&apos;t software.
             <br />
-            <span className="text-muted-foreground">non-negotiable.</span>
+            <span className="text-muted-foreground">It&apos;s a service.</span>
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Enterprise-grade security isn&apos;t optional. It&apos;s built into every layer of our platform, from infrastructure to application.
+            You don&apos;t buy a platform and figure it out yourself. We build and operate everything on your behalf.
           </p>
         </div>
 
-        {/* Compliance badges */}
-        <div className="flex flex-wrap gap-3 mb-16">
-          {badges.map((badge) => (
-            <div
-              key={badge}
-              className="px-4 py-2 rounded-full bg-card border border-border text-sm font-medium text-foreground"
-            >
-              {badge}
-            </div>
-          ))}
-        </div>
-
-        {/* Security features grid */}
+        {/* Features grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {features.map((feature) => (
             <div

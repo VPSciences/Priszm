@@ -34,7 +34,7 @@ export function Footer() {
               <span className="text-xl font-bold text-foreground">Priszm</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
-              AI-powered lead generation for modern sales teams.
+              Done-for-you lead generation for blue-collar service businesses.
             </p>
           </div>
 

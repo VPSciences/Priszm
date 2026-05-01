@@ -2,13 +2,13 @@
 
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Zap, Target, TrendingUp, Users } from 'lucide-react'
+import { ArrowRight, Phone, Star, Calendar } from 'lucide-react'
 
 const stats = [
-  { value: '10x', label: 'More leads', company: 'SALESFORCE' },
-  { value: '85%', label: 'Time saved', company: 'HUBSPOT' },
-  { value: '300%', label: 'ROI increase', company: 'STRIPE' },
-  { value: '$2M+', label: 'Revenue generated', company: 'NOTION' },
+  { value: '61 reviews', label: 'in 6 weeks', company: 'PEST CONTROL · TAMPA' },
+  { value: '3 new accounts', label: 'from cold email', company: 'LAWN CARE · FLORIDA' },
+  { value: '40% more calls', label: 'month over month', company: 'HVAC · PHOENIX' },
+  { value: '2 weeks', label: 'average time to launch', company: 'ALL CLIENTS' },
 ]
 
 export function Hero() {
@@ -18,20 +18,20 @@ export function Hero() {
         {/* Badge */}
         <div className="flex justify-center mb-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border text-sm text-muted-foreground">
-            <Zap className="w-4 h-4 text-foreground" />
-            <span>AI-Powered Lead Generation Platform</span>
+            <Phone className="w-4 h-4 text-foreground" />
+            <span>Done-for-you lead generation for trades</span>
           </div>
         </div>
 
         {/* Main headline */}
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.1]">
-            <span className="block">The platform to</span>
-            <span className="block text-muted-foreground">generate leads</span>
+            <span className="block">Your phone should ring</span>
+            <span className="block text-muted-foreground">before your crew shows up.</span>
           </h1>
-          
+
           <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Your toolkit to stop cold calling and start converting. Securely discover, qualify, and engage leads at scale.
+            Most pest control, landscaping, and HVAC companies are invisible online. We fix that — and build the automated follow-up system that turns leads into booked jobs.
           </p>
 
           {/* CTA buttons */}
@@ -53,9 +53,9 @@ export function Hero() {
         {/* Feature pills */}
         <div className="mt-16 flex flex-wrap justify-center gap-4">
           {[
-            { icon: Target, label: 'Precision targeting' },
-            { icon: TrendingUp, label: 'Revenue growth' },
-            { icon: Users, label: 'Quality leads' },
+            { icon: Phone, label: 'More inbound calls' },
+            { icon: Star, label: 'More Google reviews' },
+            { icon: Calendar, label: 'More booked jobs' },
           ].map((feature, index) => (
             <div
               key={index}
