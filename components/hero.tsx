@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import { TrackedLink } from '@/components/tracked-link'
 import { ArrowRight, Phone, Star, Calendar } from 'lucide-react'
 
 const stats = [
@@ -37,15 +38,23 @@ export function Hero() {
           {/* CTA buttons */}
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="bg-foreground text-background hover:bg-foreground/90 h-12 px-8 text-base" asChild>
-              <Link href="/contact">
+              <TrackedLink
+                href="/contact"
+                eventName="book_call_click"
+                eventParams={{ location: 'hero', label: 'Book a Call' }}
+              >
                 Book a Call
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              </TrackedLink>
             </Button>
             <Button variant="outline" size="lg" className="h-12 px-8 text-base border-border hover:bg-secondary" asChild>
-              <Link href="#workflow">
+              <TrackedLink
+                href="#workflow"
+                eventName="how_it_works_click"
+                eventParams={{ location: 'hero', label: 'See How It Works' }}
+              >
                 See How It Works
-              </Link>
+              </TrackedLink>
             </Button>
           </div>
         </div>

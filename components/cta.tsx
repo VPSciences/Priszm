@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { TrackedLink } from '@/components/tracked-link'
 
 export function CTA() {
   return (
@@ -17,10 +18,14 @@ export function CTA() {
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-background text-foreground hover:bg-background/90 h-12 px-8" asChild>
-                <Link href="mailto:joe@priszm.ai">
+                <TrackedLink
+                  href="mailto:joe@priszm.ai"
+                  eventName="contact_click"
+                  eventParams={{ location: 'cta_section', label: "Let's talk" }}
+                >
                   Let&apos;s talk
                   <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+                </TrackedLink>
               </Button>
               <Button variant="outline" size="lg" className="h-12 px-8 border-background/30 text-background bg-transparent hover:bg-background/10" asChild>
                 <Link href="#workflow">See how it works</Link>

@@ -119,7 +119,7 @@ export default function SecurityPage() {
           <h2 className="text-2xl font-bold text-foreground mb-4">Responsible Disclosure</h2>
           <p className="text-muted-foreground leading-relaxed">
             We appreciate the work of security researchers. If you discover a vulnerability, 
-            please report it responsibly to security@priszm.com. We commit to acknowledging 
+            please report it responsibly to joe@priszm.ai. We commit to acknowledging 
             your report within 24 hours.
           </p>
         </div>

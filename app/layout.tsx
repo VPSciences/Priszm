@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { generateMetadata as createMetadata, organizationStructuredData } from '@/lib/seo'
 import './globals.css'
 
@@ -35,6 +36,7 @@ export default function RootLayout({
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
+      {process.env.NODE_ENV === 'production' && <GoogleAnalytics gaId="G-DF5SBPRLST" />}
     </html>
   )
 }

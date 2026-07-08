@@ -3,6 +3,7 @@ import { Sparkles, ArrowLeft, Mail, MessageSquare, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Footer } from '@/components/footer'
+import { TrackedLink } from '@/components/tracked-link'
 import { generateMetadata as createMetadata } from '@/lib/seo'
 
 export const metadata = createMetadata({
@@ -52,7 +53,14 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Email Us</h3>
-                    <p className="mt-1 text-muted-foreground">hello@priszm.com</p>
+                    <TrackedLink
+                      href="mailto:joe@priszm.ai"
+                      eventName="contact_click"
+                      eventParams={{ location: 'contact_page', label: 'Email Us' }}
+                      className="mt-1 inline-block text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      joe@priszm.ai
+                    </TrackedLink>
                   </div>
                 </div>
 

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
+import { TrackedLink } from '@/components/tracked-link'
 import { Menu, X } from 'lucide-react'
 
 const navigation = [
@@ -61,7 +62,13 @@ export function Header() {
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
           <Button size="sm" className="bg-foreground text-background hover:bg-foreground/90" asChild>
-            <Link href="mailto:joe@priszm.ai">Get in touch</Link>
+            <TrackedLink
+              href="mailto:joe@priszm.ai"
+              eventName="contact_click"
+              eventParams={{ location: 'header', label: 'Get in touch' }}
+            >
+              Get in touch
+            </TrackedLink>
           </Button>
         </div>
       </nav>
@@ -82,7 +89,14 @@ export function Header() {
             ))}
             <div className="mt-4 flex flex-col gap-2">
               <Button className="w-full justify-center bg-foreground text-background" asChild>
-                <Link href="mailto:joe@priszm.ai">Get in touch</Link>
+                <TrackedLink
+                  href="mailto:joe@priszm.ai"
+                  eventName="contact_click"
+                  eventParams={{ location: 'header_mobile', label: 'Get in touch' }}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Get in touch
+                </TrackedLink>
               </Button>
             </div>
           </div>

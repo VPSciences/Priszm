@@ -83,14 +83,14 @@ export default function PrivacyPage() {
               <p className="text-muted-foreground leading-relaxed">
                 You have the right to access, correct, or delete your personal information. You may 
                 also opt out of certain communications. To exercise these rights, please contact us 
-                at privacy@priszm.com.
+                at joe@priszm.ai.
               </p>
             </section>
 
             <section className="mb-10">
               <h2 className="text-xl font-semibold text-foreground mb-4">6. Contact Us</h2>
               <p className="text-muted-foreground leading-relaxed">
-                If you have questions about this Privacy Policy, please contact us at privacy@priszm.com 
+                If you have questions about this Privacy Policy, please contact us at joe@priszm.ai 
                 or through our <Link href="/contact" className="text-foreground underline">contact page</Link>.
               </p>
             </section>

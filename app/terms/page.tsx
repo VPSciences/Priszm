@@ -101,7 +101,7 @@ export default function TermsPage() {
             <section className="mb-10">
               <h2 className="text-xl font-semibold text-foreground mb-4">8. Contact</h2>
               <p className="text-muted-foreground leading-relaxed">
-                For questions about these Terms, please contact us at legal@priszm.com or through 
+                For questions about these Terms, please contact us at joe@priszm.ai or through 
                 our <Link href="/contact" className="text-foreground underline">contact page</Link>.
               </p>
             </section>
